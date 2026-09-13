@@ -37,12 +37,15 @@
           <label>Game type<select name="game"><option>Doubles</option><option>Singles</option><option>Either</option></select></label>
         </div>
         <label>Court<select name="court" required><option value="Court 1">Court 1 — Parking lot</option><option value="Court 2">Court 2</option><option value="Court 3">Court 3</option><option value="Court 4">Court 4</option><option value="Court 5">Court 5</option><option value="Court 6">Court 6 — Church side</option></select></label>
+        <label>Number of players<input name="players" type="number" min="1" max="12" value="1" required /></label>
+        <label>Description (optional)<textarea name="description" maxlength="120" placeholder="e.g., bringing my family"></textarea></label>
         <div class="two-col">
           <label>Arrive<select name="arrive" required></select></label>
           <label>Leave<select name="leave" required></select></label>
         </div>
         <label>Status<select name="status"><option>Looking for players</option><option>I have a group</option><option>Open play</option></select></label>
         <button class="primary" type="submit">Save RSVP</button>
+        <button class="danger hidden" type="button" id="delete-rsvp">Delete this RSVP</button>
         <p class="form-note">Use the same nickname later if you need to edit this RSVP.</p>
       </form>
     </section>
@@ -62,7 +65,7 @@
         <li>Follow posted park and facility rules. Play safely and use appropriate footwear.</li>
       </ol>
     </section>
-    <p class="footer-note">Entries are automatically removed after their day passes.</p>
+    <p class="footer-note">Please submit only one RSVP per visit when possible. Entries are automatically removed after their day passes.</p>
   </main>
   <div class="toast" id="toast" role="status"></div>
   <script src="config.js"></script><script src="app.js"></script>
