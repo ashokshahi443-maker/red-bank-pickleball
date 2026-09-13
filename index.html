@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#166534" />
+  <title>Red Bank Pickleball</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <div class="ball" aria-hidden="true">●</div>
+      <div>
+        <p class="eyebrow">RED BANK COURTS</p>
+        <h1>Who’s playing this week?</h1>
+        <p class="subtitle">Let other players know when you’re coming—no real name, phone, or account needed.</p>
+      </div>
+    </header>
+
+    <section class="week" aria-label="Choose a day" id="day-tabs"></section>
+
+    <section class="summary card">
+      <div><span class="muted">Selected day</span><strong id="selected-date"></strong></div>
+      <div class="count"><strong id="player-count">0</strong><span class="muted">players coming</span></div>
+    </section>
+
+    <button class="primary add-button" id="show-form">＋ I’m playing this day</button>
+
+    <section class="card form-card hidden" id="form-card">
+      <div class="section-heading"><div><h2 id="form-title">Add your RSVP</h2><p>Use a nickname only.</p></div><button class="icon-button" id="close-form" aria-label="Close">×</button></div>
+      <form id="rsvp-form">
+        <label>Nickname<input name="nickname" maxlength="20" required placeholder="e.g., Ace" /></label>
+        <div class="two-col">
+          <label>Skill level<select name="level" required><option value="Beginner">Beginner</option><option>2.5</option><option>3.0</option><option>3.5</option><option>4.0</option><option>4.5+</option></select></label>
+          <label>Game type<select name="game"><option>Doubles</option><option>Singles</option><option>Either</option></select></label>
+        </div>
+        <div class="two-col">
+          <label>Arrive<select name="arrive" required></select></label>
+          <label>Leave<select name="leave" required></select></label>
+        </div>
+        <label>Status<select name="status"><option>Looking for players</option><option>I have a group</option><option>Open play</option></select></label>
+        <button class="primary" type="submit">Save RSVP</button>
+        <p class="form-note">After saving, you’ll receive a private edit code. Save it if you want to remove your RSVP later.</p>
+      </form>
+    </section>
+
+    <section class="players" id="players"></section>
+    <p class="footer-note">Entries are automatically removed after their day passes. Please be respectful and follow court rules.</p>
+  </main>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="config.js"></script><script src="app.js"></script>
+</body>
+</html>
