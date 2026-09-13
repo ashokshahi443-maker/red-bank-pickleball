@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#166534" />
   <title>Red Bank Pickleball</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=6" />
 </head>
 <body>
   <main class="shell">
@@ -32,6 +32,7 @@
       <div class="section-heading"><div><h2 id="form-title">Add your RSVP</h2><p>Use a nickname only.</p></div><button class="icon-button" id="close-form" aria-label="Close">×</button></div>
       <form id="rsvp-form">
         <label>Nickname<input name="nickname" maxlength="20" required placeholder="e.g., Ace" /></label>
+        <label>Edit password<input name="edit_password" type="password" minlength="4" maxlength="40" required placeholder="Create a simple password" /></label>
         <div class="two-col">
           <label>Skill level<select name="level" required><option value="Beginner">Beginner</option><option>2.5</option><option>3.0</option><option>3.5</option><option>4.0</option><option>4.5+</option></select></label>
           <label>Game type<select name="game"><option>Doubles</option><option>Singles</option><option>Either</option></select></label>
@@ -51,7 +52,7 @@
     </section>
     <section class="card form-card hidden" id="manage-card">
       <div class="section-heading"><div><h2>Manage my RSVP</h2><p>Find your response using your nickname.</p></div><button class="icon-button" id="close-manage" aria-label="Close">×</button></div>
-      <form id="manage-form"><label>Nickname<input name="manage-nickname" maxlength="20" required placeholder="e.g., Ace" /></label><button class="primary" type="submit">Find my RSVP</button><p class="form-note">Nickname matching is case-insensitive.</p></form>
+      <form id="manage-form"><label>Nickname<input name="manage-nickname" maxlength="20" required placeholder="e.g., Ace" /></label><label>Edit password<input name="manage-password" type="password" required placeholder="Enter your edit password" /></label><button class="primary" type="submit">Find my RSVP</button><p class="form-note">Use the nickname and password you chose when creating the RSVP.</p></form>
     </section>
 
     <section class="players" id="players"></section>
@@ -68,6 +69,6 @@
     <p class="footer-note">Please submit only one RSVP per visit when possible. Entries are automatically removed after their day passes.</p>
   </main>
   <div class="toast" id="toast" role="status"></div>
-  <script src="config.js?v=5"></script><script src="app.js?v=5"></script>
+  <script src="config.js?v=6"></script><script src="app.js?v=6"></script>
 </body>
 </html>
