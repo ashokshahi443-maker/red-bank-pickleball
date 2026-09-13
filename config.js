@@ -1,3 +1,4 @@
-// Optional shared online database settings.
-// Leave blank for a private local demo. See README.md to enable shared RSVPs.
-window.RB_CONFIG = { supabaseUrl: "", supabaseAnonKey: "" };
+window.RB_CONFIG = {
+  supabaseUrl: "https://qvswtazfshmksxubnhqj.supabase.co",
+  supabaseAnonKey: "sb_publishable_mXSzt2u6nYlGk5A9IXah_w_PQAnkehe"
+};
