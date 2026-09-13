@@ -26,6 +26,7 @@
     </section>
 
     <button class="primary add-button" id="show-form">＋ I’m playing this day</button>
+    <button class="secondary manage-button" id="show-manage">Manage my RSVP</button>
 
     <section class="card form-card hidden" id="form-card">
       <div class="section-heading"><div><h2 id="form-title">Add your RSVP</h2><p>Use a nickname only.</p></div><button class="icon-button" id="close-form" aria-label="Close">×</button></div>
@@ -35,18 +36,33 @@
           <label>Skill level<select name="level" required><option value="Beginner">Beginner</option><option>2.5</option><option>3.0</option><option>3.5</option><option>4.0</option><option>4.5+</option></select></label>
           <label>Game type<select name="game"><option>Doubles</option><option>Singles</option><option>Either</option></select></label>
         </div>
+        <label>Court<select name="court" required><option value="Court 1">Court 1 — Parking lot</option><option value="Court 2">Court 2</option><option value="Court 3">Court 3</option><option value="Court 4">Court 4</option><option value="Court 5">Court 5</option><option value="Court 6">Court 6 — Church side</option></select></label>
         <div class="two-col">
           <label>Arrive<select name="arrive" required></select></label>
           <label>Leave<select name="leave" required></select></label>
         </div>
         <label>Status<select name="status"><option>Looking for players</option><option>I have a group</option><option>Open play</option></select></label>
         <button class="primary" type="submit">Save RSVP</button>
-        <p class="form-note">After saving, you’ll receive a private edit code. Save it if you want to remove your RSVP later.</p>
+        <p class="form-note">Use the same nickname later if you need to edit this RSVP.</p>
       </form>
+    </section>
+    <section class="card form-card hidden" id="manage-card">
+      <div class="section-heading"><div><h2>Manage my RSVP</h2><p>Find your response using your nickname.</p></div><button class="icon-button" id="close-manage" aria-label="Close">×</button></div>
+      <form id="manage-form"><label>Nickname<input name="manage-nickname" maxlength="20" required placeholder="e.g., Ace" /></label><button class="primary" type="submit">Find my RSVP</button><p class="form-note">Nickname matching is case-insensitive.</p></form>
     </section>
 
     <section class="players" id="players"></section>
-    <p class="footer-note">Entries are automatically removed after their day passes. Please be respectful and follow court rules.</p>
+    <section class="rules card">
+      <h2>Red Bank court rules</h2>
+      <ol>
+        <li>Share the courts, rotate fairly, and welcome players of all levels.</li>
+        <li>Keep games moving when others are waiting.</li>
+        <li>Respect nearby homes, the church, parking areas, and other court users.</li>
+        <li>Keep the courts clean and take all trash with you.</li>
+        <li>Follow posted park and facility rules. Play safely and use appropriate footwear.</li>
+      </ol>
+    </section>
+    <p class="footer-note">Entries are automatically removed after their day passes.</p>
   </main>
   <div class="toast" id="toast" role="status"></div>
   <script src="config.js"></script><script src="app.js"></script>
